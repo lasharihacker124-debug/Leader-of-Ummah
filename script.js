@@ -138,7 +138,7 @@ function changeVideo(newSrc) {
   video.onloadeddata = () => {
     video.style.opacity = 1;
     video.play().catch(() => { });
-    playPauseBtn.src = 'assets/pause.svg';
+    playPauseBtn.src = 'assets/play.svg';
   };
 }
 
