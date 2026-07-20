@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader of Ummah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Website Loader -->
+    <div id="loader">
+        <div class="loader-image">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <div class="loader-circle"></div>
+    </div>
+
+    <header id="home">
+        <div class="header-container">
+            <div class="container">
+                <h2>Leader</h2>
+            </div>
+
+            <div class="bar-icon cursor" id="menu">
+                <img src="assest/bar.svg" alt="menu">
+            </div>
+
+            <nav>
+                <button type="button" class="nav-link" data-target="home">Home</button>
+                <button type="button" class="nav-link" data-target="About">About</button>
+                <button type="button" class="nav-link" data-target="shorts">Shorts</button>
+            </nav>
+        </div>
+
+        <div class="content-container">
+            <h3>Ayatollah Ali Khamenei</h3>
+            <h5>He is <span id="naming"></span></h5>
+            <p>I have built this platform for my leader, who is the leader of all Muslims, so that his light may reach every corner of the world through these short videos. May God be my strength in this journey. Ameen!</p>
+            <button class="cursor" id="view-short">View Shorts</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="About" id="About">
+            <div class="heading-container">
+                <h2>About Leader</h2>
+            </div>
+            <div class="main-content">
+                <p>Ayatollah Ali Khamenei is the supreme leader of Iran and the spiritual guide of Shia Muslims worldwide, a respected scholar who has spent his life studying and teaching Islam. He is known as a voice for justice and a true friend of the oppressed, with his firm stand for Palestine making him a symbol of hope for Muslims everywhere. In 1981, he was badly hurt in a bomb attack while leading prayers at a mosque in Tehran, where a hidden explosive injured his hand, arm, and lung; though he survived, his right hand never fully healed, a sacrifice that shows his courage and deep commitment to serving Islam even at the cost of his own life.</p>
+                <img src="image/hamas-poster-Khamenei-500-1024x1560.jpg" alt="khamenei`s image" loading="lazy"
+                    width="200px" height="350px">
+            </div>
+        </section>
+
+        <section class="shorts" id="shorts">
+            <div class="heading-container">
+                <h2>Shorts</h2>
+            </div>
+            <div class="shorts-container">
+
+                <div class="video-wrapper">
+
+                    <video loop id="video" playsinline>
+                        <source src="videos/short1.mp4" type="video/mp4">
+                    </video>
+
+
+                    <div class="video-controls">
+                        <div class="play-pause play-icon">
+                            <img src="assest/pause.svg" id="play-pause" alt="play-pause">
+                        </div>
+                        <div class="left-icon">
+
+                            <div class="like icon" id="likebtn">
+                                <img src="assest/like.svg" id="like" alt="play">
+                            </div>
+
+                            <div class="share icon">
+                                <img src="assest/share.svg" id="share" alt="play">
+                                <span class="tooltip">Share</span>
+                            </div>
+
+                            <div class="download icon">
+                                <img src="assest/download.svg" id="download" alt="play">
+                                <span class="tooltip">Download</span>
+                            </div>
+
+                            <div class="volume icon" id="volume-btn">
+                                <img src="assest/volumeUp.svg" id="volume" alt="Volumeicon">
+                            </div>
+                        </div>
+
+
+                        <div class="right-icon">
+
+                            <div class="ArrowUp icon">
+                                <img src="assest/upArrow.svg" id="UpArrow" alt="play">
+                            </div>
+
+                            <div class="ArrowDown icon">
+                                <img src="assest/downArrow.svg" id="DownArrow" alt="play">
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" id="progress-fill"></div>
+                        </div>
+
+                        <div class="full-screen icon" >
+                            <img src="assest/fullscreen.svg" id="fullscreen" alt="fullscreen">
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+        <div class="footer-links">
+            <div class="heading">
+                Contact me
+            </div>
+            <div class="link">
+                <button type="button" class="footer-icon white-border" aria-label="Copy WhatsApp contact">
+                    <img src="assest/whatsapp.svg" alt="whatsapp">
+                    <span class="tooltip">+913446404838</span>
+                </button>
+                <button type="button" class="footer-icon white-border" aria-label="Copy phone number">
+                    <img src="assest/contact.svg" alt="contactno">
+                    <span class="tooltip">03446404838</span>
+                </button>
+                <button type="button" class="footer-icon white-border" aria-label="Copy email address">
+                    <img src="assest/email.svg" alt="email">
+                    <span class="tooltip">lasharihacker124@gmail.com</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <p>All right reserved @ Copyright. The shorts video contents have taken from <strong
+                    id="copyright-content">Youtube Channels and TikTok.</strong>.</p>
+        </div>
+
+        <div class="developer-info">
+            <h3>Developed by <strong id="developer-name">Ahsan Raza</strong></h3>
+        </div>
+
+
+    </footer>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

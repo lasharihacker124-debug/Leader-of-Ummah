@@ -1,0 +1,954 @@
+/* Importing Google Poppins Font*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #282C33;
+    --secondary-color: #fff;
+    --accent-color: #F21010;
+    --border-radius-lg: 35px;
+    --border-radius-md: 15px;
+    --border-radius-sm: 12px;
+    --icon-size: 50px;
+    --icon-size-lg: 64px;
+    --video-width: 360px;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    overscroll-behavior: none;
+}
+
+
+/*======== Header Section ================*/
+
+header {
+    background-color: black;
+    width: 100%;
+    min-height: 85vh;
+    border-bottom: 4px solid var(--accent-color);
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-image: url('image/bgimageayotaollah.avif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.header-container {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 6rem;
+    position: relative;
+}
+
+.container h2 {
+    color: var(--accent-color);
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav .nav-link {
+    color: var(--secondary-color);
+    font-size: clamp(1.1rem, 0.9rem + 0.5vw, 1.5rem);
+    font-weight: 550;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    background: transparent;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-link:active {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.1) translateY(-5px);
+}
+
+nav .nav-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.content-container {
+    width: 50%;
+    margin: 3rem 0 0 2.4rem;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content-container h3 {
+    color: var(--accent-color);
+    font-size: clamp(1rem, 0.745rem + 1.27vw, 1.7rem);
+    font-weight: bold;
+}
+
+.content-container h5 {
+    font-size: clamp(0.7rem, 0.482rem + 1.09vw, 1.2rem);
+}
+
+#naming {
+    color: var(--accent-color);
+}
+
+.content-container p {
+    width: 80%;
+    text-align: center;
+    font-size: clamp(0.7rem, 0.591rem + 0.55vw, 1rem);
+    font-weight: 500;
+}
+
+.content-container button {
+    padding: 0.8rem 1rem;
+    background: linear-gradient(#8C2F2F, #F51212);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: clamp(1.1rem, 0.9rem + 0.5vw, 1.5rem);
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in;
+}
+
+.content-container button:active {
+    transform: scale(1.05) translateY(-5px);
+}
+
+#menu {
+    display: none;
+}
+
+.bar-icon {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.bar-icon:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    transition: all 0.3s ease;
+}
+
+.bar-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+
+/*======== Main Section ================*/
+
+/*======== About Section ================*/
+.About {
+    width: 100%;
+    min-height: 600px;
+    scroll-margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #353232;
+}
+
+.heading-container {
+    padding: 2rem;
+}
+
+.heading-container h2 {
+    text-align: center;
+    color: var(--accent-color);
+    word-spacing: 0.5rem;
+    font-size: clamp(1.875rem, 1.761rem + 0.57vw, 2.188rem);
+}
+
+.main-content {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.main-content p {
+    text-align: justify;
+    min-height: 300px;
+    padding: 1.5rem;
+    line-height: 1.8;
+}
+
+.main-content img {
+    border: 3px solid var(--accent-color);
+    border-radius: var(--border-radius-md);
+    border-radius: 15px;
+}
+
+
+
+
+
+/*======== Shorts Section ================*/
+
+.shorts {
+    width: 100%;
+    min-height: fit-content;
+    scroll-margin-top: 90px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #282C33;
+    overflow: visible;
+    border-top: 4px solid var(--accent-color);
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+
+    border-bottom: 4px solid var(--accent-color);
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+/* 1. CONTAINER: Acts as the main outer frame boundary */
+.shorts-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    aspect-ratio: 9 / 16;
+    position: relative;
+    overflow: visible;
+    transition: all 0.3s ease;
+}
+
+/* 2. SCROLL WINDOW: Changed to block, added full dimensions */
+.video-wrapper {
+    position: relative;
+    display: block;
+    /* Changed from inline-block to allow full height */
+    width: 100%;
+    height: 100%;
+    /* Forces the wrapper to match the aspect ratio boundary */
+    overflow: visible;
+
+    /* Critical Snapping Properties */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: auto !important;
+    /* Overrides any smooth scroll inherits */
+
+    /* Hide scrollbars for an app-like feel */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.video-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. VIDEO TARGETS: Height must match the scrolling frame viewport precisely */
+.shorts-container video {
+    width: 100%;
+    height: 100%;
+    /* Each video takes up 100% of the visible frame */
+    object-fit: cover;
+    border: 1px solid var(--secondary-color);
+    border-radius: 12px;
+
+    /* Snapping targets must sit on the elements inside the scrollable container */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    background-color: black;
+}
+
+
+.play-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.play-icon {
+    width: 64px;
+    height: 64px;
+    filter: brightness(0) invert(1);
+}
+
+.disappear {
+    display: none;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.volume.icon {
+    position: relative;
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+.icon:active,
+.icon img:active {
+    transform: scale(1.1);
+}
+
+
+.red-bg {
+    background-color: var(--accent-color);
+}
+
+.left-icon {
+    height: 70%;
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+.right-icon {
+    height: 70%;
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+.progress-bar-container {
+    position: absolute;
+    bottom: 0.4%;
+    left: 2.5%;
+    width: 95%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #ff0050;
+    transition: width 0.1s linear;
+}
+
+
+.full-screen {
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    width: 50px;
+    height: 50px;
+}
+
+
+.white-border {
+    border: 2px solid var(--secondary-color);
+}
+
+.footer-links {
+    padding: 2rem 1rem 1rem;
+}
+
+.footer-links .heading {
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.3rem);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links .link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-icon {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: 1;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-icon:focus,
+.footer-icon:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.footer-icon:hover,
+.footer-icon:focus-visible {
+    transform: translateY(-2px);
+}
+
+.footer-icon:active {
+    transform: scale(0.95);
+}
+
+.footer-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-icon .tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: clamp(0.8rem, 0.6rem + 0.5vw, 1rem);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-icon .tooltip::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
+}
+
+.footer-icon:hover .tooltip,
+.footer-icon:focus-visible .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* --- Footer Base Styling --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 3rem 2rem 1.5rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* --- Contact Section & Links --- */
+.footer-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.footer-links .heading {
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.3rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links .link {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* --- Icon Styling (From your code) --- */
+.footer-icon {
+    position: relative;
+    /* Crucial for positioning the tooltips */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.footer-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+/* Icon Hover (From your code) */
+.footer-icon:active {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 15px rgba(242, 16, 16, 0.4);
+    /* Subtle glow effect matching accent color */
+}
+
+/* --- Tooltip Logic --- */
+
+.tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip arrow pointing up */
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
+}
+
+/* Show tooltip on icon hover */
+.footer-icon:active .tooltip,
+.icon:active .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- Content & Copyright Section --- */
+.footer-content {
+    text-align: center;
+    max-width: 600px;
+    font-size: clamp(0.85rem, 0.7rem + 0.5vw, 1.1rem);
+    line-height: 1.6;
+    opacity: 0.8;
+    /* Makes text slightly softer while keeping headings crisp */
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+#copyright-content {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* --- Developer Info Section --- */
+.developer-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.developer-info h3 {
+    font-size: clamp(0.85rem, 0.65rem + 0.5vw, 1rem);
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.menu-appear {
+    right: 0;
+}
+
+#developer-name {
+    color: var(--secondary-color);
+    font-weight: 600;
+    border-bottom: 1px dashed var(--accent-color);
+    /* Nice design touch */
+    padding-bottom: 2px;
+}
+
+/* Website Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-circle {
+    width: clamp(80px, 25vw, 300px);
+    height: clamp(80px, 25vw, 300px);
+    border-radius: 50%;
+    border: clamp(4px, 1vw, 6px) solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--accent-color);
+    border-right-color: var(--accent-color);
+    animation: spin 1s linear infinite;
+    position: relative;
+}
+
+.loader-image img {
+    width: 60vw;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.footer-icon img,
+.footer-icon .tooltip {
+    pointer-events: none;
+}
+
+/* Fullscreen mode styles */
+.video-wrapper:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    background-color: black;
+    position: relative;
+}
+
+.video-wrapper:fullscreen video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+    border-radius: 0;
+}
+
+.video-wrapper:fullscreen .left-icon {
+    right: 22%;
+    left: auto;
+    z-index: 1000;
+}
+
+.video-wrapper:fullscreen .right-icon {
+    left: 22%;
+    right: auto;
+    display: flex;
+    z-index: 1000;
+}
+
+.video-wrapper:fullscreen .full-screen {
+    z-index: 1000;
+}
+
+.video-wrapper:fullscreen .progress-bar-container {
+    z-index: 1000;
+}
+
+/* Vendor prefix support for fullscreen */
+.video-wrapper:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    background-color: black;
+    position: relative;
+}
+
+.video-wrapper:-webkit-full-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+    border-radius: 0;
+}
+
+.video-wrapper:-webkit-full-screen .left-icon {
+    right: 22%;
+    left: auto;
+    z-index: 1000;
+}
+
+.video-wrapper:-webkit-full-screen .right-icon {
+    left: 22%;
+    right: auto;
+    display: flex;
+    z-index: 1000;
+}
+
+.video-wrapper:-webkit-full-screen .full-screen {
+    z-index: 1000;
+}
+
+.video-wrapper:-webkit-full-screen .progress-bar-container {
+    z-index: 1000;
+}
+
+
+
+@media (max-width: 550px) {
+    footer {
+        padding: 2rem 1rem 1.5rem 1rem;
+        gap: 2rem;
+    }
+
+    .left-icon {
+        right: 3%;
+        gap: 0;
+    }
+
+    .content-container {
+        width: 80%;
+        margin: 0;
+    }
+
+    .right-icon {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+    
+    
+}
+
+@media (min-width: 551px) {
+    .left-icon {
+        right: -20%;
+        left: auto;
+    }
+
+    .right-icon {
+        display: flex;
+        left: -20%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .content-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: -200px;
+        flex-direction: column;
+        height: 100vh;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        transition: all 0.5s ease;
+        z-index: 98;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    header {
+        background-position: center center;
+        min-height: 60vh;
+    }
+
+    .video-wrapper:fullscreen .left-icon {
+        right: 3%;
+        left: auto;
+        z-index: 1000;
+    }
+
+    .video-wrapper:fullscreen .right-icon {
+        left: -15%;
+        right: auto;
+        display: flex;
+        z-index: 1000;
+    }
+
+    .video-wrapper:-webkit-full-screen .left-icon {
+        right: 3%;
+        left: auto;
+        z-index: 1000;
+    }
+
+    .video-wrapper:-webkit-full-screen .right-icon {
+        left: -15%;
+        right: auto;
+        display: flex;
+        z-index: 1000;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    
+
+    .video-wrapper:fullscreen .left-icon {
+        right: 3%;
+        left: auto;
+        z-index: 1000;
+    }
+
+    .video-wrapper:fullscreen .right-icon {
+        left: -15%;
+        right: auto;
+        display: flex;
+        z-index: 1000;
+    }
+
+    .video-wrapper:-webkit-full-screen .left-icon {
+        right: 3%;
+        left: auto;
+        z-index: 1000;
+    }
+
+    .video-wrapper:-webkit-full-screen .right-icon {
+        left: -15%;
+        right: auto;
+        display: flex;
+        z-index: 1000;
+    }
+
+}
+
+
+@media (hover: hover) {
+    nav .nav-link:hover {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: scale(1.1) translateY(-5px);
+    }
+
+    .icon:hover {
+        background-color: var(--accent-color);
+    }
+
+    .footer-icon:hover .tooltip {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .content-container button:hover {
+        transform: scale(1.05) translateY(-5px);
+    }
+
+    .footer-icon:hover {
+        background-color: var(--accent-color);
+        box-shadow: 0 4px 15px rgba(242, 16, 16, 0.4);
+
+    }
+
+}
