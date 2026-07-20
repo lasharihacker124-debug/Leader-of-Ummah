@@ -22,40 +22,37 @@ let touchActive = false;
 let shorts = [];
 let videosLoaded = false;
 
+function generateVideoList() {
+  shorts = [];
+  for (let j = 1; j <= 42; j++) {
+    shorts.push('short' + j + '.mp4');
+  }
+  videosLoaded = true;
+  // Load first video if none is loaded
+  if (shorts.length > 0 && !video.src) {
+    changeVideo(shorts[0]);
+  }
+
+  // Handle shared video URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const sharedVideo = urlParams.get('v');
+  if (sharedVideo && shorts.includes(sharedVideo)) {
+    const index = shorts.indexOf(sharedVideo);
+    i = index;
+    changeVideo(sharedVideo);
+    // Scroll to shorts section
+    setTimeout(() => {
+      const shortsSection = document.getElementById('shorts');
+      if (shortsSection) {
+        shortsSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    }, 100);
+  }
+}
+
 async function loadVideoList() {
   try {
-    const response = await fetch('videos/');
-    if (!response.ok) throw new Error('Failed to fetch videos directory');
-    const html = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const links = doc.querySelectorAll('a[href$=".mp4"]');
-    shorts = Array.from(links).map(link => link.getAttribute('href').split('/').pop()).sort((a, b) => {
-      const numA = parseInt(a.replace(/\D/g, ''));
-      const numB = parseInt(b.replace(/\D/g, ''));
-      return numA - numB;
-    });
-    videosLoaded = true;
-    // Load first video if none is loaded
-    if (shorts.length > 0 && !video.src) {
-      changeVideo(shorts[0]);
-    }
-    
-    // Handle shared video URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const sharedVideo = urlParams.get('v');
-    if (sharedVideo && shorts.includes(sharedVideo)) {
-      const index = shorts.indexOf(sharedVideo);
-      i = index;
-      changeVideo(sharedVideo);
-      // Scroll to shorts section
-      setTimeout(() => {
-        const shortsSection = document.getElementById('shorts');
-        if (shortsSection) {
-          shortsSection.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
-      }, 100);
-    }
+    generateVideoList();
   } catch (error) {
     console.error('Could not load video list:', error);
   }
