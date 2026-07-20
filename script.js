@@ -76,9 +76,9 @@ function toggleMenu(e) {
   const navbar = document.querySelector('nav');
   navbar.classList.toggle('menu-appear');
   if (navbar.classList.contains('menu-appear')) {
-    menuicon.src = 'assest/cancel.svg';
+    menuicon.src = 'assets/cancel.svg';
   } else {
-    menuicon.src = 'assest/bar.svg';
+    menuicon.src = 'assets/bar.svg';
   }
 }
 
@@ -86,10 +86,10 @@ function toggleMenu(e) {
 function togglePlayPause() {
   if (video.paused) {
     video.play();
-    playPauseBtn.src = 'assest/play.svg';
+    playPauseBtn.src = 'assets/play.svg';
   } else {
     video.pause();
-    playPauseBtn.src = 'assest/pause.svg';
+    playPauseBtn.src = 'assets/pause.svg';
   }
 }
 
@@ -101,10 +101,10 @@ function toggleVolume() {
   const volumeicon = volumeBtn.querySelector('img');
   if (video.muted) {
     video.muted = false;
-    volumeicon.src = 'assest/volumeUp.svg';
+    volumeicon.src = 'assets/volumeUp.svg';
   } else {
     video.muted = true;
-    volumeicon.src = 'assest/volumemute.svg';
+    volumeicon.src = 'assets/volumemute.svg';
   }
 }
 
@@ -141,7 +141,7 @@ function changeVideo(newSrc) {
   video.onloadeddata = () => {
     video.style.opacity = 1;
     video.play().catch(() => { });
-    playPauseBtn.src = 'assest/pause.svg';
+    playPauseBtn.src = 'assets/pause.svg';
   };
 }
 
@@ -180,7 +180,7 @@ function closeMobileMenu() {
     navbar.style.transition = '';
   }
   const menuIcon = menuBtn.querySelector('img');
-  if (menuIcon) menuIcon.src = 'assest/bar.svg';
+  if (menuIcon) menuIcon.src = 'assets/bar.svg';
 }
 
 // Scroll to section using scrollIntoView (better mobile support)
@@ -203,10 +203,10 @@ function toggleScreenMode() {
   const fullscreenIcon = fullScreenBtn.querySelector('img');
   if (!document.fullscreenElement) {
     videoWrapper.requestFullscreen().catch((err) => {});
-    fullscreenIcon.src = 'assest/exitFullScreen.svg';
+    fullscreenIcon.src = 'assets/exitFullScreen.svg';
   } else {
     document.exitFullscreen();
-    fullscreenIcon.src = 'assest/fullscreen.svg';
+    fullscreenIcon.src = 'assets/fullscreen.svg';
   }
 }
 
@@ -339,17 +339,17 @@ fullScreenBtn.addEventListener('click', toggleScreenMode);
 document.addEventListener('fullscreenchange', () => {
   const fullscreenIcon = fullScreenBtn.querySelector('img');
   if (!document.fullscreenElement) {
-    fullscreenIcon.src = 'assest/fullscreen.svg';
+    fullscreenIcon.src = 'assets/fullscreen.svg';
   } else {
-    fullscreenIcon.src = 'assest/exitFullScreen.svg';
+    fullscreenIcon.src = 'assets/exitFullScreen.svg';
   }
 });
 document.addEventListener('webkitfullscreenchange', () => {
   const fullscreenIcon = fullScreenBtn.querySelector('img');
   if (!document.fullscreenElement) {
-    fullscreenIcon.src = 'assest/fullscreen.svg';
+    fullscreenIcon.src = 'assets/fullscreen.svg';
   } else {
-    fullscreenIcon.src = 'assest/exitFullScreen.svg';
+    fullscreenIcon.src = 'assets/exitFullScreen.svg';
   }
 });
 
